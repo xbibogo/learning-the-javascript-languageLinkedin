@@ -1,0 +1,89 @@
+//create a number plate check program with input in  hmtl
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Plate Check (Simulation)</title>
+  <style>
+
+body {
+  font-family: sans-serif;
+}
+
+#plate-form {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+}
+
+#plate {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+#result {
+  font-weight: bold;
+}
+
+#plate.valid {
+  border-color: green;
+}
+
+#plate.invalid {
+  border-color: red;
+  display: block;
+  font-size: 1.5rem;
+}
+
+ 
+  </style>
+</head>
+<body>
+  <h1>Number Plate Check</h1>
+  <form id="plate-form">
+    <label for="plate">Enter number plate:</label>
+    <input type="text" id="plate" name="plate" required>
+    <button type="submit">Check</button>
+  </form>
+  <div id="plate-icon"></div><div id="result"></div>
+    <!-- Add an empty div for the warning sign -->
+ <script> 
+
+const form = document.getElementById('plate-form');
+const plateInput = document.getElementById('plate');
+const resultDiv = document.getElementById('result');
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    // Simulate validation based on format (replace with your desired criteria)
+    const plate = plateInput.value.toUpperCase();
+    const isValidFormat = /^[A-Z]{2}[0-9]{5}$/.test(plate); // This was incorrect
+ // Check if the plate has a valid length
+     console.log(plate.length, isValidFormat);
+     
+     if (isValidFormat) {
+        resultDiv.textContent = 'Plate format is valid (simulation)';
+        plateInput.classList.add('valid');
+        plateInput.classList.remove('invalid'); // Remove the "invalid" class
+     } else {
+        const plateIcon = document.getElementById('plate-icon');
+        plateIcon.innerHTML = '  ⚠️   ';
+        resultDiv.textContent = 'Invalid plate format (simulation)';
+        plateInput.classList.remove('valid'); // Remove the "valid" class
+        plateInput.classList.add('invalid');
+        //add a warning sign        
+     
+       
+
+         
+     }
+}); 
+
+    </script> 
+</body>
+</html>
