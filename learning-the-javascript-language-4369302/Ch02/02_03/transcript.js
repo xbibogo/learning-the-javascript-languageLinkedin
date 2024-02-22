@@ -12,6 +12,7 @@ let declaration = `This I say to you: "good morning". Huzzah!`;
 declaration;
 
 declaration = `This I say to you: "${myString}". Huzzah!`;
+console.log(declaration);
 declaration; //this is called string interpolation
 
 // More info:

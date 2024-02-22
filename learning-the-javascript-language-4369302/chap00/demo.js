@@ -17,12 +17,15 @@ console.log(data.hobby); // { gaming: false, reading: true, sport: "football"}
 console.log(data.hobby.sport); // football
 console.log(data.class[1]); // HTML
 
-
 // code from https://www.programiz.com/javascript/json
 const addNumbers = (a, b) =>  
    a + b;
   ;
   
-  // Example usage:
-  const result = addNumbers(5, 7);
+const result = addNumbers(5, 7);
+
+
+// Example usage:
+
+
   console.log(result); 
