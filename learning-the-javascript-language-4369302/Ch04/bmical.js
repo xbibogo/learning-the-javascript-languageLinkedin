@@ -29,4 +29,7 @@ function calculateBMI(weight, height) {
   console.log(calculateBMI(80, 1.8));  // Overweight
   console.log(calculateBMI(90, 1.65)); // Overweight
   console.log(calculateBMI(100, 1.7)); // Obese
-  
+
+ 
+   
+ 
