@@ -13,12 +13,14 @@ function speak() {
 speak();
 
 // Function expression assigned to a variable
-const speak = function() {
+const talk = function() {
 	console.log('Arf');
 	console.log('Woof');
 	console.log('Meow');
 	console.log('Moooooooooooo');
 }
+
+talk();
 
 // More info:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
